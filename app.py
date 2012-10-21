@@ -43,6 +43,7 @@ class ChatNamespace(BaseNamespace):
 
     def disconnect(self, *args, **kwargs):
         del self.connections[self.key]
+        print 'Disconnect', self.key
         super(ChatNamespace, self).disconnect(*args, **kwargs)
 
     def on_chat(self, message):
