@@ -6,6 +6,6 @@ import sys, os
 INTERP = os.path.expanduser("~/env/chatterbox/bin/python")
 if sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)
 
-sys.path.append('./Chatterbox')
-import app
+from Chatterbox import app
+os.chdir('Chatterbox')
 application = app.application
