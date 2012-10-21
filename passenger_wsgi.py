@@ -4,4 +4,4 @@ import sys, os
 INTERP = os.path.expanduser("~/env/chatterbox/bin/python")
 if sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)
 
-import wsgi-test-socketio.py
+__import__('Chatterbox/wsgi-test-socketio.py')
